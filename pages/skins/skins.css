@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    max-width: 1600px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    width: 100%;
+    height: 65px;
+    background-color: #1C1C1C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px #00C896 solid;
+}
+
+.logo-container {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    cursor: pointer;
+    transition: ease-in-out all 0.5s;
+}
+
+.logo-container:hover {
+    transform: scale(1.02);
+}
+
+.logo-text {
+    color: #00C896;
+    font-size: 35px;
+    padding-top: 5px;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.items {
+    margin-right: 50px;
+    justify-content: space-between;
+    display: flex;
+    column-gap: 35px;
+    text-align: center;
+    color: #00C896;
+    font-size: 24px;
+}
+
+.text-1 {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.text-1:hover {
+    color: white;
+}
+
+.text-2 {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+.text-2:hover {
+    color: white;
+}
+
+.text-3 {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+.text-3:hover {
+    color: white;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 150vh;
+    background-color: #252525;
+}
