@@ -24,6 +24,8 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px #00C896 solid;
+    position: fixed;
+    z-index: 1;
 }
 
 .logo-container {
