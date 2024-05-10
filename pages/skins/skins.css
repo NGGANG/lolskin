@@ -165,6 +165,7 @@ input {
     align-content: start;
     background-color: #373A3E;
     overflow-y: scroll;
+    margin-bottom: 25px;
 }
 
 .champ-name {
