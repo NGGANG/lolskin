@@ -134,15 +134,17 @@ header {
 }
 
 .filter-text {
-    padding: 10px;
+    padding: 10px 10px 10px 25px;
     font-size: 20px;
     color:#00C896;
     text-shadow: 1px 1px 3px #000;
+    cursor: default;
 }
 
 .setas {
     width: 15px;
     height: auto;
+    cursor: pointer;
 }
 
 input {
@@ -158,9 +160,9 @@ input {
     height: 100%;
     border: 3px solid #1C1C1C;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Manter a revisão de 5 em 5 */
-    justify-content: space-between; /* Distribuir espaço horizontalmente */
-    align-content: start; /* Alinhar as colunas ao topo */
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    align-content: start;
     background-color: #373A3E;
     overflow-y: scroll;
 }

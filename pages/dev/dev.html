@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV LOG</title>
+    <link rel="stylesheet" href="dev.css">
+    <link rel="icon" href="../../assets/logo.png" type="image/icon type">
+    
+</head>
+<body>
+    <h1>Dev Log</h1>
+    <span id="githubChanges"></span>
+
+    <script>
+        function getGitHubCommits() {
+            const githubLink = "https://api.github.com/repos/NGGANG/lolskin/commits";
+
+            fetch(githubLink)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Erro ao buscar os dados do GitHub: " + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const lastCommitMessage = data[0].commit.message;
+                    
+                    const githubChangesSpan = document.getElementById("githubChanges");
+                    githubChangesSpan.textContent = "Última alteração: " + lastCommitMessage;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+        getGitHubCommits();
+    </script>
+</body>
+</html>
