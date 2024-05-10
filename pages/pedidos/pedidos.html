@@ -153,22 +153,40 @@
         <span class="home-title">Pedidos</span>
         <div class="panel-container">
             <div class="content-1">
+                <span class="content-1-text">PEDIDOS</span>
+                <img src="../../assets/seta-para-direita.png" class="seta">
                 <div class="background"></div>
             </div>
             <div class="content-2">
                 <div class="top-content">
-                    <input type="text" class="skin-input" placeholder="Skins">
+                    <input type="text" style="display: none;" class="skin-input" placeholder="Skins">
                     <div class="buttons-container">
                         <button class="btn-mark">Skin</button>
                         <button class="btn-mark">Chroma</button>
                         <button class="btn-mark">Fix</button>
-                        <button class="btn-mark">Outro</button>
+                        <button class="btn-mark">Help</button>
                     </div>
                 </div>
                 <div class="lower-content">
                     <div class="champ-select">
-
+                        <div style="display: none;" class="skins-selector"></div>
+                        <div style="display: none;" class="chroma-selector"></div>
                     </div>
+                    <div style="display: none;" class="fix-selector">
+                        <span class="fix-text">Digite a skin ou Chroma que deseja arrumar:</span>
+                        <div class="fix-items-container">
+                            <input class="fix-input" type="text">
+                            <button class="fix-button">Enviar</button>
+                        </div>
+                    </div>
+                    <div style="display: none;" class="help-selector">
+                        <span class="help-text">Digite que tipo de ajuda você precisa:</span>
+                        <div class="help-items-container">
+                            <input class="help-input" type="text">
+                            <button class="help-button">Enviar</button>
+                        </div>
+                    </div>
+                    <button class="confirm-button" style="display: none;">Enviar</button>
                 </div>
             </div>
         </div>
