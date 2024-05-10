@@ -9,8 +9,16 @@
     
 </head>
 <body>
-    <h1>Dev Log</h1>
-    <span id="githubChanges"></span>
+    <div class="container">
+        <h1>Dev Log</h1>
+        <div class="github-container">
+            <span id="githubChanges"></span>
+            <span id="commitChanges"></span>
+        </div>
+        <a href="../../index.html">
+            <span class="dev">go back</span>
+        </a>
+    </div>
 
     <script>
         function getGitHubCommits() {
@@ -27,7 +35,9 @@
                     const lastCommitMessage = data[0].commit.message;
                     
                     const githubChangesSpan = document.getElementById("githubChanges");
-                    githubChangesSpan.textContent = "Última alteração: " + lastCommitMessage;
+                    githubChangesSpan.textContent = "Última alteração";
+                    const commitChangesSpan = document.getElementById("commitChanges");
+                    commitChangesSpan.textContent = lastCommitMessage;
                 })
                 .catch(error => {
                     console.error(error);

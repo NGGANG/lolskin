@@ -4,6 +4,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body {
@@ -14,7 +26,62 @@ body {
     font-family: "Bebas Neue", sans-serif;
     align-items: center;
     justify-content: center;
-    height: 500px;
     font-size: 2em;
     text-shadow: 1px 1px 5px #000;
+    height: 100vh;
+}
+
+.container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dev {
+    transition: ease-in-out all 0.2s;
+    cursor: default;
+    animation: entrada 1s ease forwards;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-50px);
+    color: #00C896;
+}
+
+a {
+    animation: entrada 1s ease forwards;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-50px);
+}
+
+.dev:hover {
+    opacity: 50%;
+}
+
+h1 {
+    font-size: 100px;
+    animation: entrada 1s ease forwards;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-50px);
+    
+}
+
+#githubChanges {
+    animation: entrada 1s ease forwards;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-50px);
+}
+
+#commitChanges {
+    color: white;
+    animation: entrada 1s ease forwards;
+    opacity: 0; /* Inicialmente transparente */
+    transform: translateY(-50px);
+}
+
+.github-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
