@@ -1,27 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* Estilize a barra de rolagem */
 ::-webkit-scrollbar {
-    width: 10px; /* largura da barra de rolagem */
-  }
-  
-  /* Estilize o indicador de rolagem */
-  ::-webkit-scrollbar-thumb {
-    background-color: #888; /* cor do indicador de rolagem */
-    border-radius: 5px; /* borda do indicador de rolagem */
-  }
-  
-  /* Estilize o indicador de rolagem quando estiver passando o mouse sobre ele */
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* cor do indicador de rolagem ao passar o mouse */
-  }
-  
-  /* Estilize a pista de rolagem */
-  ::-webkit-scrollbar-track {
-    background-color: #373A3E; /* cor de fundo da pista de rolagem */
-  }
-  
+    width: 10px; 
+}
 
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 5px; 
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+  
+  ::-webkit-scrollbar-track {
+    background-color: #373A3E; 
+}
+  
 * {
     margin: 0;
     padding: 0;
@@ -163,13 +158,16 @@ input {
     height: 100%;
     border: 3px solid #1C1C1C;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* Manter a revisão de 5 em 5 */
+    justify-content: space-between; /* Distribuir espaço horizontalmente */
+    align-content: start; /* Alinhar as colunas ao topo */
     background-color: #373A3E;
     overflow-y: scroll;
 }
 
 .champ-name {
     text-shadow: 1px 1px 3px #000;
+    font-size: 120%;
 }
 .champ-icon {
     width: 25px;

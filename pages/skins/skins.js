@@ -10,6 +10,32 @@ function carregarArquivo(url, callback) {
     xhr.send();
 }
 
+// Função para filtrar campeões com base no texto de pesquisa
+function filtrarCampeoes(texto) {
+    const campeoes = document.querySelectorAll('.champ-name');
+    const termoPesquisa = texto.toLowerCase();
+
+    campeoes.forEach(campeao => {
+        const nomeCampeao = campeao.textContent.toLowerCase();
+        const divCampeao = campeao.parentElement;
+        
+        // Verificar se o texto de pesquisa está presente no nome do campeão
+        if (nomeCampeao.includes(termoPesquisa)) {
+            divCampeao.style.display = 'flex'; // Exibir a div do campeão
+        } else {
+            divCampeao.style.display = 'none'; // Ocultar a div do campeão
+        }
+    });
+}
+
+// Adicionar evento de entrada ao input de pesquisa
+const inputPesquisa = document.querySelector('input[type="text"]');
+inputPesquisa.addEventListener('input', function(event) {
+    const textoPesquisa = event.target.value;
+    filtrarCampeoes(textoPesquisa);
+});
+
+
 // Função para baixar arquivos de uma pasta
 function baixarArquivosDoCampeao(nomeCampeao) {
     // Criar um link de download para o arquivo ZIP
